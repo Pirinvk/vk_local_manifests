@@ -10,7 +10,6 @@ Initialise from LineageOS:
 
 Use the following local manifest:
 
-
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <project name="Pirinvk/android_device_lenovo_A6020" path="device/lenovo/A6020" remote="github" />
@@ -24,16 +23,18 @@ Use the following local manifest:
 </manifest>
 
 
-
 java-9
 
 Sync and build:
 
 repo sync -c --force-broken --force-sync
 
-in /Build/Core/config.mk edit the line: # APICHECK_COMMAND := $(APICHECK) -JXmxXXXXm -J"classpath $(APICHECK_CLASSPATH)"
+in /Build/Core/config.mk edit the line:
+ # APICHECK_COMMAND := $(APICHECK) -JXmxXXXXm -J"classpath $(APICHECK_CLASSPATH)"
+
 to:
-                                        # APICHECK_COMMAND := $(APICHECK) -JXmx3036m -J"classpath $(APICHECK_CLASSPATH)"
+
+ # APICHECK_COMMAND := $(APICHECK) -JXmx3036m -J"classpath $(APICHECK_CLASSPATH)"
 
 source build/envsetup.sh
 
@@ -62,6 +63,8 @@ How to Build
 Initialise from CyanogenMod:
 
     repo init -u git://github.com/CyanogenMod/android.git -b cm-11.0
+
+Use the following local manifest:
 
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
