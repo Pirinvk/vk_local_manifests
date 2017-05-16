@@ -30,11 +30,17 @@ java-9
 Sync and build:
 
 repo sync -c --force-broken --force-sync
+
 source build/envsetup.sh
+
 croot
+
 export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4G"
+
 export JAVA_OPTIONS="-Xmx4G"
+
 export USE_NINJA=false
+
 brunch A6020
 
 
