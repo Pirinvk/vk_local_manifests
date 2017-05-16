@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <project name="pirinvk/android_kernel_maxwellplus" path="kernel/bq/maxwellplus" remote="github" revision="cm-11.0" />
+    <remove-project name="CyanogenMod/android_frameworks_av" />
+    <project name="pirinvk/framework_av" path="frameworks/av" revision="master" />
+    <project name="pirinvk/android_device_maxwellplus" path="device/bq" revision="master" />
+    <project name="pirinvk/android_vendor_maxwellplus" path="vendor/bq" revision="cm-11.0" />
+ </manifest>
