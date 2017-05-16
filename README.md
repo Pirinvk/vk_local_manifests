@@ -31,13 +31,17 @@ Sync and build:
 
 repo sync -c --force-broken --force-sync
 
+in /Build/Core/config.mk edit the line: # APICHECK_COMMAND := $(APICHECK) -JXmxXXXXm -J"classpath $(APICHECK_CLASSPATH)"
+to:
+                                        # APICHECK_COMMAND := $(APICHECK) -JXmx3036m -J"classpath $(APICHECK_CLASSPATH)"
+
 source build/envsetup.sh
 
 croot
 
-export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx4G"
+export ANDROID_JACK_VM_ARGS="-Dfile.encoding=UTF-8 -XX:+TieredCompilation -Xmx3G"
 
-export JAVA_OPTIONS="-Xmx4G"
+export JAVA_OPTIONS="-Xmx3G"
 
 export USE_NINJA=false
 
